@@ -60,18 +60,29 @@ const TimetableApp = () => {
   };
   const fifthSemData = { A: { coordinator: 'Ms.Ch Naga Padma Latha', room: 'B-203', schedule: { Monday: ['EE', 'EE', 'APTITUDE', 'APTITUDE', 'LUNCH', 'DM Lab', 'DM Lab', 'DM Lab'], Tuesday: ['AI', '', 'MCCP-I', '', 'LUNCH', 'CN Lab', 'CN Lab', 'CN Lab'], Wednesday: ['CN', 'AI', 'FLAT', 'Library', 'LUNCH', 'AI', 'DM', 'CN'], Thursday: ['CN', 'DM', 'FLAT', 'FLAT', 'LUNCH', 'FSD-2', 'AI', 'Sports'], Friday: ['FLAT', 'AI', 'CN', 'DM', 'LUNCH', 'MCCP-I', 'MCCP-I', 'MCCP-I'], Saturday: ['DM', 'DM', 'CN', 'FLAT', 'LUNCH', 'FSD-2', 'FSD-2', 'FSD-2'] } }, B: { coordinator: 'Mr. Syed Akheel Hassan Gori', room: 'B-204', schedule: { Monday: ['AI', 'CN', 'DM', 'AI', 'LUNCH', 'EE', 'APTITUDE', 'APTITUDE'], Tuesday: ['FLAT', 'MCCP-I', 'MCCP-I', 'MCCP-I', 'LUNCH', 'APTITUDE', 'AI', 'CN'], Wednesday: ['DM', 'DM Lab', 'DM Lab', 'DM Lab', 'LUNCH', 'DM Lab', 'FLAT', 'Library'], Thursday: ['AI', 'FSD-2', 'CN', 'CN', 'LUNCH', 'DM', 'DM', 'FLAT'], Friday: ['DM', 'CN Lab', 'CN Lab', 'CN Lab', 'LUNCH', 'MCCP-I', 'MCCP-I', 'MCCP-I'], Saturday: ['CN', 'FSD-2', 'FSD-2', 'FSD-2', 'LUNCH', 'AI', 'FLAT', 'Sports'] } }, C: { coordinator: 'Mr. T. Nava Krishna', room: 'G-301', schedule: { Monday: ['DM', 'DM Lab', 'DM Lab', 'DM Lab', 'LUNCH', 'MCCP-I', 'MCCP-I', 'MCCP-I'], Tuesday: ['CN', 'CN Lab', 'CN Lab', 'CN Lab', 'LUNCH', 'CN Lab', 'FLAT', 'APTITUDE'], Wednesday: ['FLAT', 'EE', 'CN', 'CN', 'LUNCH', 'DM', 'FLAT', 'AI'], Thursday: ['FLAT', 'FSD-2', 'FSD-2', 'FSD-2', 'LUNCH', 'AI', 'CN', 'DM'], Friday: ['AI', 'MCCP-I', 'MCCP-I', 'MCCP-I', 'LUNCH', 'DM', 'FLAT', 'Library'], Saturday: ['DM', 'AI', 'AI', 'FSD-2', 'LUNCH', 'FLAT', 'CN', 'Sports'] } }, D: { coordinator: 'Mr. G. Deepak Pavan Kumar', room: 'G-302', schedule: { Monday: ['FLAT', 'CN', 'CN', 'Library', 'LUNCH', 'MCCP-I', 'MCCP-I', 'MCCP-I'], Tuesday: ['DM', 'AI', 'APTITUDE', 'APTITUDE', 'LUNCH', 'FSD-2', 'FSD-2', 'FSD-2'], Wednesday: ['DM', 'AI', 'Lab', 'FLAT', 'LUNCH', 'DM', 'EE', 'FLAT'], Thursday: ['CN', 'CN Lab', 'CN Lab', 'CN Lab', 'LUNCH', 'DM', 'FLAT', 'AI'], Friday: ['CN', 'MCCP-I', 'MCCP-I', 'MCCP-I', 'LUNCH', 'AI', 'FSD-2', 'Sports'], Saturday: ['FLAT', 'FLAT', 'CN', 'DM', 'LUNCH', 'DM Lab', 'DM Lab', 'DM Lab'] } } };
   
+  // --- CORRECTED 7th SEM DATA BASED ON PDF ---
   const seventhSemData = {
-    A: { coordinator: 'Mrs. M.N.V. Surekha', room: 'G401', schedule: { Monday: ['MS', 'FST', 'MS', 'DL', 'LUNCH', 'SPM', 'MAIN PROJECT', 'MAIN PROJECT'], Tuesday: ['DEVOPS', 'MAIN PROJECT', 'DL', 'DEVOPS', 'LUNCH', 'CC', 'MAIN PROJECT', 'CC'], Wednesday: ['CC', 'DL', 'DEVOPS', 'SPM', 'LUNCH', 'FST', 'SPM', 'CC'], Thursday: ['SPM', 'SPM', 'MS', 'CC', 'LUNCH', 'DEVOPS', 'MAIN PROJECT', 'MAIN PROJECT'], Friday: ['DL', 'DL', 'MAIN PROJECT', 'CC', 'LUNCH', 'MAIN PROJECT', 'DEVOPS', 'CC'], Saturday: ['SPM', 'MS', 'MS', 'MAIN PROJECT', 'LUNCH', 'CC', 'CC', 'MS'], } },
-    B: { coordinator: 'Mr. P. Rama Mohan Rao', room: 'G-101', schedule: { Monday: ['DEVOPS', 'CC', 'DL', 'MAIN PROJECT', 'LUNCH', 'CC', 'MS', 'MS'], Tuesday: ['CC', 'DL', 'MS', 'SPM', 'LUNCH', 'MAIN PROJECT', 'SPM', 'DEVOPS'], Wednesday: ['MS', 'FST', 'FST', 'FST', 'LUNCH', 'DL', 'DEVOPS', 'DEVOPS'], Thursday: ['DL', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT', 'LUNCH', 'SPM', 'MS', 'MS'], Friday: ['SPM', 'DEVOPS', 'DL', 'SPM', 'LUNCH', 'CC', 'CC', 'DL'], Saturday: ['CC', 'DEVOPS', 'SPM', 'MAIN PROJECT', 'LUNCH', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT'], } },
-    C: { coordinator: 'Mr. K. Praveen Kumar', room: 'G-402', schedule: { Monday: ['SPM', 'SPM', 'FST', 'DL', 'LUNCH', 'DEVOPS', 'MS', 'DL'], Tuesday: ['CC', 'MS', 'DEVOPS', 'DEVOPS', 'LUNCH', 'MAIN PROJECT', 'FST', 'MAIN PROJECT'], Wednesday: ['DL', '', 'FST', 'CC', 'LUNCH', 'FST', 'FST', 'FST'], Thursday: ['MS', 'CC', 'MAIN PROJECT', 'MAIN PROJECT', 'LUNCH', 'DL', 'SPM', 'SPM'], Friday: ['SPM', 'DL', 'MAIN PROJECT', 'MAIN PROJECT', 'LUNCH', 'MS', 'DL', 'CC'], Saturday: ['MS', 'DEVOPS', 'MAIN PROJECT', '', 'LUNCH', 'CC', 'DEVOPS', 'CC'], } },
-    D: { coordinator: 'Mr. E. Hanuman Sai Gupta', room: 'B-403', schedule: { Monday: ['DL', 'DEVOPS', 'DEVOPS', 'MS', 'LUNCH', 'MAIN PROJECT', 'CC', 'DL'], Tuesday: ['MS', 'FST', 'MAIN PROJECT', 'MAIN PROJECT', 'LUNCH', 'SPM', 'MAIN PROJECT', 'SPM'], Wednesday: ['CC', 'FST', 'FST', 'FST', 'LUNCH', 'SPM', 'DEVOPS', 'CC'], Thursday: ['SPM', 'MS', 'DL', 'MAIN PROJECT', 'LUNCH', 'DEVOPS', 'CC', 'MS'], Friday: ['DL', 'MS', 'DEVOPS', 'CC', 'LUNCH', 'FST', 'MAIN PROJECT', 'MAIN PROJECT'], Saturday: ['DEVOPS', 'SPM', 'DL', 'CC', 'LUNCH', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT'], } },
-    CST: { coordinator: 'Mr. Anil Kumar Reddy Tetali', room: 'B-401', schedule: { Monday: ['CC', 'DEVOPS', 'SPM', 'DL', 'LUNCH', 'SPM', 'DEVOPS', 'MAIN PROJECT'], Tuesday: ['MS', 'FST', 'FST', 'FST', 'LUNCH', 'MS', 'CC', 'CC'], Wednesday: ['SPM', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT', 'LUNCH', 'DL', 'SPM', 'MAIN PROJECT'], Thursday: ['DEVOPS', 'MS', 'SPM', 'CC', 'LUNCH', 'MS', 'DL', 'DEVOPS'], Friday: ['MS', 'CC', 'DEVOPS', 'DL', 'LUNCH', 'DL', 'SPM', 'DEVOPS'], Saturday: ['DL', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT', 'LUNCH', 'MS', 'DL', 'MAIN PROJECT'] } }
+    A: { coordinator: 'Mrs. M.N.V. Surekha', room: 'G401', schedule: { Monday: ['MS', 'FST', 'FST', 'FST', 'LUNCH', 'DL', 'SPM', 'MAIN PROJECT'], Tuesday: ['DEVOPS', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT', 'LUNCH', 'DEVOPS', 'DL', 'SPM'], Wednesday: ['CC', 'DEVOPS', 'DL', 'MS', 'LUNCH', 'FST', 'FST', 'FST'], Thursday: ['SPM', 'SPM', 'DL', 'CC', 'LUNCH', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT'], Friday: ['DL', 'MS', 'MS', 'CC', 'LUNCH', 'DEVOPS', 'DEVOPS', 'CC'], Saturday: ['SPM', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT', 'LUNCH', 'MAIN PROJECT', 'CC', 'MS'] } },
+    B: { coordinator: 'Mr. P. Rama Mohan Rao', room: 'G-101', schedule: { Monday: ['DEVOPS', 'CC', 'DL', 'MAIN PROJECT', 'LUNCH', 'CC', 'MS', 'MS'], Tuesday: ['CC', 'DL', 'MS', 'SPM', 'LUNCH', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT'], Wednesday: ['MS', 'FST', 'FST', 'FST', 'LUNCH', 'SPM', 'DEVOPS', 'DL'], Thursday: ['DL', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT', 'LUNCH', 'MS', 'CC', 'DEVOPS'], Friday: ['SPM', 'DEVOPS', 'DL', 'SPM', 'LUNCH', 'FST', 'FST', 'FST'], Saturday: ['CC', 'DEVOPS', 'SPM', 'MAINPROJECT', 'LUNCH', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT'] } },
+    C: { coordinator: 'Mr. K. Praveen Kumar', room: 'G-402', schedule: { Monday: ['SPM', 'FST', 'FST', 'FST', 'LUNCH', 'DEVOPS', 'MS', 'DL'], Tuesday: ['CC', 'SPM', 'DEVOPS', 'DL', 'LUNCH', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT'], Wednesday: ['DL', 'MS', 'CC', 'DEVOPS', 'LUNCH', 'FST', 'FST', 'FST'], Thursday: ['MS', 'CC', 'MAIN PROJECT', 'MAIN PROJECT', 'LUNCH', 'DL', 'SPM', 'SPM'], Friday: ['SPM', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT', 'LUNCH', 'MS', 'DL', 'CC'], Saturday: ['MS', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT', 'LUNCH', 'CC', 'DEVOPS', 'DEVOPS'] } },
+    D: { coordinator: 'Mr. E. Hanuman Sai Gupta', room: 'B-403', schedule: { Monday: ['DL', 'DEVOPS', 'DEVOPS', 'MS', 'LUNCH', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT'], Tuesday: ['MS', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT', 'LUNCH', 'CC', 'DL', 'SPM'], Wednesday: ['CC', 'FST', 'FST', 'FST', 'LUNCH', 'SPM', 'SPM', 'MAIN PROJECT'], Thursday: ['SPM', 'MS', 'DL', 'MAIN PROJECT', 'LUNCH', 'DEVOPS', 'CC', 'MS'], Friday: ['DL', 'MS', 'DEVOPS', 'CC', 'LUNCH', 'FST', 'FST', 'FST'], Saturday: ['DEVOPS', 'SPM', 'DL', 'CC', 'LUNCH', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT'] } },
+    CST: { coordinator: 'Mr. Anil Kumar Reddy Tetali', room: 'B-401', schedule: { Monday: ['CC', 'DEVOPS', 'SPM', 'DL', 'LUNCH', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT'], Tuesday: ['MS', 'FST', 'FST', 'FST', 'LUNCH', 'SPM', 'DEVOPS', 'MAIN PROJECT'], Wednesday: ['SPM', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT', 'LUNCH', 'MS', 'CC', 'CC'], Thursday: ['DEVOPS', 'MS', 'SPM', 'CC', 'LUNCH', 'FST', 'FST', 'FST'], Friday: ['MS', 'CC', 'DEVOPS', 'DL', 'LUNCH', 'DL', 'SPM', 'MAI PROJECT'], Saturday: ['DL', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT', 'LUNCH', 'MS', 'DL', 'DEVOPS'] } }
   };
 
   const thirdSemSubjects = { 'OOPTJ': 'Object Oriented Programming Through Java', 'MEFA': 'Managerial Economics and Financial Analysis', 'DLCO': 'Digital Logic & Computer Organization', 'DMGT': 'Discrete Mathematics & Graph Theory', 'ADSAA': 'Advanced Data Structures & Algorithm Analysis', 'DTI': 'Design Thinking & Innovation', 'PCS-I': 'Professional Communication Skills - I', 'PP Lab': 'Python Programming Lab', 'OOPTJ Lab': 'Object Oriented Programming Through Java Lab', 'ADSAA Lab': 'Advanced Data Structures and Algorithm Analysis Lab', 'Library': 'Library Period', 'Sports': 'Sports Period', 'LUNCH': 'Lunch Break' };
   const fifthSemSubjects = { 'DM': 'Data Warehousing and Data Mining', 'CN': 'Computer Networks', 'FLAT': 'Formal Languages and Automata Theory', 'AI': 'Artificial Intelligence', 'DM Lab': 'Data Mining Lab', 'CN Lab': 'Computer Networks Lab', 'FSD-2': 'Full Stack development-2', 'MCCP-I': 'Master Coding and Competitive Programming - Part-1', 'EE': 'English for Employment', 'APTITUDE': 'Aptitude', 'Library': 'Library Period', 'Sports': 'Sports Period', 'LUNCH': 'Lunch Break', 'Lab': 'Lab' };
   
-  const seventhSemSubjects = { 'DL': 'Deep Learning', 'CC': 'Cloud Computing', 'SPM': 'Software Project Management', 'MS': 'Management Science', 'DEVOPS': 'DevOps', 'FST': 'Full Stack Technologies Lab', 'MAIN PROJECT': 'Main Project', 'LUNCH': 'Lunch Break' };
+  const seventhSemSubjects = {
+    'DL': 'Deep Learning',
+    'CC': 'Cloud Computing',
+    'SPM': 'Software Project Management',
+    'MS': 'Management Science',
+    'DEVOPS': 'DevOps',
+    'FST': 'Full Stack Technologies Lab',
+    'MAIN PROJECT': 'Main Project',
+    'PROJECT': 'Main Project',
+    'LUNCH': 'Lunch Break'
+  };
 
   const thirdSemFaculty = {
     'DMGT': { A: 'Dr. V.S.Naresh', B: 'Mr. N.V.Murali Krishna Raja', C: 'Mr. N.V.Murali Krishna Raja', D: 'Dr. V.S.Naresh', E: 'Mr. N.V.Murali Krishna Raja', CST: 'Dr. V.S.Naresh'},
@@ -90,11 +101,12 @@ const TimetableApp = () => {
   const seventhSemFaculty = {
     'DL': { A: 'Mr.P. Naga Bhushanam', B: 'Mr.P. Naga Bhushanam', C: 'Mr.P. Naga Bhushanam', D: 'Mr. E. Hanuman Sai Gupta', CST: 'Mr. E. Hanuman Sai Gupta' },
     'CC': { A: 'Mr. P. Rama Mohan Rao', B: 'Mr. P. Rama Mohan Rao', C: 'Mr. K. Praveen Kumar', D: 'Mr. K. Praveen Kumar', CST: 'Mr. K. Praveen Kumar' },
-    'SPM': { A: 'Mr. B Bhasker Murali Krishna', B: 'Mr. B Bhasker Murali Krishna', C: 'Mr. B Bhasker Murali Krishna', D: 'Mr. Sd. Arief', CST: 'Mr. Sd. Arief' },
-    'MS': { A: 'Ms. P. Bala Jyothi', B: 'Ms. P. Bala Jyothi', C: 'Ms. P. Bala Jyothi', D: 'Mr. P. Bharath Kumar', CST: 'Mrs. P. Devi' },
-    'DEVOPS': { A: 'Mrs. M.N.V. Surekha', B: 'Mrs. M.N.V. Surekha', C: 'Mrs. M.N.V. Surekha', D: 'Mrs. M.N.V. Surekha', CST: 'Mr.Md. Sadik' },
+    'SPM': { A: 'Mr. B Bhasker Murali Krishna', B: 'Mr. B Bhasker Murali Krishna', C: 'Mr. Sd. Arief', D: 'Mr. Sd. Arief', CST: 'Mr. Sd. Arief' },
+    'MS': { A: 'Ms. P. Bala Jyothi', B: 'Ms. P. Bala Jyothi', C: 'Mr. K. Pavan Kumar', D: 'Mr. P. Bharath Kumar', CST: 'Mrs. P. Devi' },
+    'DEVOPS': { A: 'Mrs. M.N.V. Surekha', B: 'Mrs. M.N.V. Surekha', C: 'Mrs. M.N.V. Surekha', D: 'Ms.Ch Naga Padma Latha', CST: 'Mr.Md. Sadik' },
     'FST': { A: 'Mr. Anil Kumar Reddy Tetali / Mr. K Phanindra Brahmaji', B: 'Mr. Anil Kumar Reddy Tetali/ Mr. K Phanindra Brahmaji', C: 'Mr. Anil Kumar Reddy Tetali / Mr. K Phanindra Brahmaji', D: 'Mr. Anil Kumar Reddy Tetali / Mr. K Phanindra Brahmaji', CST: 'Mr. Anil Kumar Reddy Tetali / Mr. K Phanindra Brahmaji' },
-    'MAIN PROJECT': { A: 'Mrs. M.N.V. Surekha', B: 'Mr. Anil Kumar Reddy Tetali', C: 'Mr. K. Praveen Kumar', D: 'Mr.P. Naga Bhushanam / Ms.Ch Naga Padma Latha', CST: 'Mr. K. Praveen Kumar' }
+    'MAIN PROJECT': { A: 'Mrs. M.N.V. Surekha', B: 'Mr. Anil Kumar Reddy Tetali', C: 'Mr.P. Naga Bhushanam', D: 'Ms.Ch Naga Padma Latha', CST: 'Mr. K. Praveen Kumar' },
+    'PROJECT': { B: 'Mr. Anil Kumar Reddy Tetali' }
   };
 
   const getCurrentData = () => {
@@ -192,7 +204,6 @@ const TimetableApp = () => {
                 margin: '4px 0 0 0',
                 fontSize: '1.1rem'
               }}>
-                {/* --- THIS IS THE CHANGED LINE --- */}
                 {selectedSemester} Semester - CSE&CST
               </p>
             </div>
@@ -352,7 +363,7 @@ const TimetableApp = () => {
                     };
 
                     if (subject) {
-                        if(subject.includes('Lab') || subject.includes('FST') || subject.includes('PROJECT') || subject.includes('MCCP-I')) { cardStyles.backgroundColor = '#f3e8ff'; cardStyles.color = '#7e22ce'; } 
+                        if(subject.includes('Lab') || subject.includes('FST') || subject.includes('PROJECT') || subject.includes('MCCP-I')|| subject.includes('FSD-2')){ cardStyles.backgroundColor = '#f3e8ff'; cardStyles.color = '#7e22ce'; } 
                         else if (subject === 'LUNCH') { cardStyles.backgroundColor = '#ffedd5'; cardStyles.color = '#c2410c'; } 
                         else if (['Library', 'Sports', 'APTITUDE', 'EE', 'PCS-I', 'DTI'].includes(subject)) { cardStyles.backgroundColor = '#f1f5f9'; cardStyles.color = '#475569'; } 
                         else { cardStyles.backgroundColor = '#dbeafe'; cardStyles.color = '#1e40af'; }
