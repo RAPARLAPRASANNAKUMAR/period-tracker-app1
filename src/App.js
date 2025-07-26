@@ -60,7 +60,6 @@ const TimetableApp = () => {
   };
   const fifthSemData = { A: { coordinator: 'Ms.Ch Naga Padma Latha', room: 'B-203', schedule: { Monday: ['EE', 'EE', 'APTITUDE', 'APTITUDE', 'LUNCH', 'DM Lab', 'DM Lab', 'DM Lab'], Tuesday: ['AI', '', 'MCCP-I', '', 'LUNCH', 'CN Lab', 'CN Lab', 'CN Lab'], Wednesday: ['CN', 'AI', 'FLAT', 'Library', 'LUNCH', 'AI', 'DM', 'CN'], Thursday: ['CN', 'DM', 'FLAT', 'FLAT', 'LUNCH', 'FSD-2', 'AI', 'Sports'], Friday: ['FLAT', 'AI', 'CN', 'DM', 'LUNCH', 'MCCP-I', 'MCCP-I', 'MCCP-I'], Saturday: ['DM', 'DM', 'CN', 'FLAT', 'LUNCH', 'FSD-2', 'FSD-2', 'FSD-2'] } }, B: { coordinator: 'Mr. Syed Akheel Hassan Gori', room: 'B-204', schedule: { Monday: ['AI', 'CN', 'DM', 'AI', 'LUNCH', 'EE', 'APTITUDE', 'APTITUDE'], Tuesday: ['FLAT', 'MCCP-I', 'MCCP-I', 'MCCP-I', 'LUNCH', 'APTITUDE', 'AI', 'CN'], Wednesday: ['DM', 'DM Lab', 'DM Lab', 'DM Lab', 'LUNCH', 'DM Lab', 'FLAT', 'Library'], Thursday: ['AI', 'FSD-2', 'CN', 'CN', 'LUNCH', 'DM', 'DM', 'FLAT'], Friday: ['DM', 'CN Lab', 'CN Lab', 'CN Lab', 'LUNCH', 'MCCP-I', 'MCCP-I', 'MCCP-I'], Saturday: ['CN', 'FSD-2', 'FSD-2', 'FSD-2', 'LUNCH', 'AI', 'FLAT', 'Sports'] } }, C: { coordinator: 'Mr. T. Nava Krishna', room: 'G-301', schedule: { Monday: ['DM', 'DM Lab', 'DM Lab', 'DM Lab', 'LUNCH', 'MCCP-I', 'MCCP-I', 'MCCP-I'], Tuesday: ['CN', 'CN Lab', 'CN Lab', 'CN Lab', 'LUNCH', 'CN Lab', 'FLAT', 'APTITUDE'], Wednesday: ['FLAT', 'EE', 'CN', 'CN', 'LUNCH', 'DM', 'FLAT', 'AI'], Thursday: ['FLAT', 'FSD-2', 'FSD-2', 'FSD-2', 'LUNCH', 'AI', 'CN', 'DM'], Friday: ['AI', 'MCCP-I', 'MCCP-I', 'MCCP-I', 'LUNCH', 'DM', 'FLAT', 'Library'], Saturday: ['DM', 'AI', 'AI', 'FSD-2', 'LUNCH', 'FLAT', 'CN', 'Sports'] } }, D: { coordinator: 'Mr. G. Deepak Pavan Kumar', room: 'G-302', schedule: { Monday: ['FLAT', 'CN', 'CN', 'Library', 'LUNCH', 'MCCP-I', 'MCCP-I', 'MCCP-I'], Tuesday: ['DM', 'AI', 'APTITUDE', 'APTITUDE', 'LUNCH', 'FSD-2', 'FSD-2', 'FSD-2'], Wednesday: ['DM', 'AI', 'Lab', 'FLAT', 'LUNCH', 'DM', 'EE', 'FLAT'], Thursday: ['CN', 'CN Lab', 'CN Lab', 'CN Lab', 'LUNCH', 'DM', 'FLAT', 'AI'], Friday: ['CN', 'MCCP-I', 'MCCP-I', 'MCCP-I', 'LUNCH', 'AI', 'FSD-2', 'Sports'], Saturday: ['FLAT', 'FLAT', 'CN', 'DM', 'LUNCH', 'DM Lab', 'DM Lab', 'DM Lab'] } } };
   
-  // --- CORRECTED 7th SEM DATA BASED ON PDF ---
   const seventhSemData = {
     A: { coordinator: 'Mrs. M.N.V. Surekha', room: 'G401', schedule: { Monday: ['MS', 'FST', 'FST', 'FST', 'LUNCH', 'DL', 'SPM', 'MAIN PROJECT'], Tuesday: ['DEVOPS', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT', 'LUNCH', 'DEVOPS', 'DL', 'SPM'], Wednesday: ['CC', 'DEVOPS', 'DL', 'MS', 'LUNCH', 'FST', 'FST', 'FST'], Thursday: ['SPM', 'SPM', 'DL', 'CC', 'LUNCH', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT'], Friday: ['DL', 'MS', 'MS', 'CC', 'LUNCH', 'DEVOPS', 'DEVOPS', 'CC'], Saturday: ['SPM', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT', 'LUNCH', 'MAIN PROJECT', 'CC', 'MS'] } },
     B: { coordinator: 'Mr. P. Rama Mohan Rao', room: 'G-101', schedule: { Monday: ['DEVOPS', 'CC', 'DL', 'MAIN PROJECT', 'LUNCH', 'CC', 'MS', 'MS'], Tuesday: ['CC', 'DL', 'MS', 'SPM', 'LUNCH', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT'], Wednesday: ['MS', 'FST', 'FST', 'FST', 'LUNCH', 'SPM', 'DEVOPS', 'DL'], Thursday: ['DL', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT', 'LUNCH', 'MS', 'CC', 'DEVOPS'], Friday: ['SPM', 'DEVOPS', 'DL', 'SPM', 'LUNCH', 'FST', 'FST', 'FST'], Saturday: ['CC', 'DEVOPS', 'SPM', 'MAINPROJECT', 'LUNCH', 'MAIN PROJECT', 'MAIN PROJECT', 'MAIN PROJECT'] } },
@@ -181,6 +180,7 @@ const TimetableApp = () => {
         boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
         border: '1px solid #e2e8f0'
       }}>
+        {/* --- HEADER SECTION --- */}
         <div style={{
           display: 'flex',
           justifyContent: 'space-between',
@@ -188,26 +188,51 @@ const TimetableApp = () => {
           flexWrap: 'wrap',
           gap: '16px'
         }}>
+          {/* Left: Logo and Name */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
             <img src={logoUrl} alt="Sri Vasavi Engineering College Logo" style={{ height: '60px' }} />
             <div>
-              <h1 style={{
-                fontSize: '2rem',
-                fontWeight: 'bold',
-                color: '#1e293b',
-                margin: '0'
-              }}>
+              <h1 style={{ fontSize: '2rem', fontWeight: 'bold', color: '#1e293b', margin: '0' }}>
                 Sri Vasavi Engineering College
               </h1>
-              <p style={{
-                color: '#64748b',
-                margin: '4px 0 0 0',
-                fontSize: '1.1rem'
-              }}>
+              <p style={{ color: '#64748b', margin: '4px 0 0 0', fontSize: '1.1rem' }}>
                 {selectedSemester} Semester - CSE&CST
               </p>
             </div>
           </div>
+          
+          {/* Middle: Notice Board */}
+          <div style={{ flex: 1, minWidth: '200px', textAlign: 'center' }}>
+            <a 
+              href="/notice.pdf" // <-- IMPORTANT: Change this to the path of your PDF in the 'public' folder
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-block',
+                backgroundColor: '#f1f5f9',
+                border: '1px solid #e2e8f0',
+                borderRadius: '8px',
+                padding: '12px 24px',
+                textDecoration: 'none',
+                color: '#1e293b',
+                fontWeight: '500',
+                transition: 'background-color 0.2s, box-shadow 0.2s',
+                boxShadow: '0 1px 2px rgba(0,0,0,0.05)'
+              }}
+              onMouseOver={e => {
+                e.currentTarget.style.backgroundColor = '#e2e8f0';
+                e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+              }}
+              onMouseOut={e => {
+                e.currentTarget.style.backgroundColor = '#f1f5f9';
+                e.currentTarget.style.boxShadow = '0 1px 2px rgba(0,0,0,0.05)';
+              }}
+            >
+              Notice Board
+            </a>
+          </div>
+
+          {/* Right: Time and Date */}
           <div style={{
             display: 'flex',
             flexDirection: 'column',
